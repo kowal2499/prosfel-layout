@@ -1,0 +1,142 @@
+aside {
+	background-color: $cBlue;
+	background-image: url("../../images/sidebar-background.png");
+	background-repeat: no-repeat;
+	background-position: bottom;
+	height: 100vh;
+	display: block;
+	padding-top: 60px;
+
+	.logo {
+		position: relative;
+		display: inline-block;
+		z-index: 100;
+
+		left: -40px;
+		width: 110%;
+		height: 105px;
+
+		border-bottom: 1px solid $cYellowDark;
+		
+		background-color: $cYellow;
+		padding: 15px;
+		img {
+			margin: 0 auto;
+		}
+	}
+
+	.logo::before {
+		content: "";
+		display: block;
+		position: absolute;
+
+		left: 0px;
+		bottom: -40px;
+		z-index: 100;
+
+		width: 0px;
+	 
+	  border-top: 40px solid $cYellowDark;
+	  border-left: 40px solid transparent;
+	}
+
+	.logo::after {
+		content: "";
+		display: block;
+		position: absolute;
+		right: -40px;
+		top: 0;
+		z-index: 100;
+
+		width: 0px;
+
+	  border-top: 105px solid $cYellow;
+	  border-right: 40px solid transparent;
+	}
+
+	.address {
+		color: $cWhite;
+		font-size: 22px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		text-align: center;
+
+		hr {
+			background-color: $cWhite;
+			width: 30%;
+		}
+		
+		.line {	
+		}
+
+		.line-phone {
+			vertical-align: top;
+			margin-top: 10px;
+
+			img {
+				display: inline-block;
+				width: 50px;
+				vertical-align: top;
+				padding-top: 17px;
+				padding-right: 8px;
+			}
+
+			.phone {
+				display: inline-block;
+				font-weight: bold;
+				font-size: 25px;
+				letter-spacing: 2px;
+			}
+
+		}
+
+	}
+
+	nav {
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+
+			li {
+				text-align: center;
+
+				a {
+					position: relative;
+					display: block;
+					color: $cBlue;
+					padding: 10px;
+					font-size: 22px;
+					font-weight: 900;
+					background-color: $cYellow;
+					text-transform: uppercase;
+					transition: all 0.6s;
+
+					&:hover {
+						text-decoration: none;
+						background-color: $cYellowDark !important;
+					}
+
+					&:focus {
+						text-decoration: none;
+						background-color: $cYellowDark;
+						color: $cBlue !important;
+					}
+					&:active {
+						text-decoration: none;
+						background-color: $cYellowDark;
+						color: $cBlue;
+					}
+
+				}
+
+				&.active {
+				a {	text-decoration: none;
+						background-color: $cYellowDark;
+				}}
+			}
+
+		}
+	}
+
+}

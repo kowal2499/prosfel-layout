@@ -1,0 +1,119 @@
+aside {
+  background-color: #0060a6;
+  background-image: url("../../images/sidebar-background.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 100vh;
+  display: block;
+  padding-top: 60px; }
+  aside .logo {
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+    left: -40px;
+    width: 110%;
+    height: 105px;
+    border-bottom: 1px solid #b8aa00;
+    background-color: #ffec00;
+    padding: 15px; }
+    aside .logo img {
+      margin: 0 auto; }
+  aside .logo::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: -40px;
+    z-index: 100;
+    width: 0px;
+    border-top: 40px solid #b8aa00;
+    border-left: 40px solid transparent; }
+  aside .logo::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    z-index: 100;
+    width: 0px;
+    border-top: 105px solid #ffec00;
+    border-right: 40px solid transparent; }
+  aside .address {
+    color: #fff;
+    font-size: 22px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center; }
+    aside .address hr {
+      background-color: #fff;
+      width: 30%; }
+    aside .address .line-phone {
+      vertical-align: top;
+      margin-top: 10px; }
+      aside .address .line-phone img {
+        display: inline-block;
+        width: 50px;
+        vertical-align: top;
+        padding-top: 17px;
+        padding-right: 8px; }
+      aside .address .line-phone .phone {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 25px;
+        letter-spacing: 2px; }
+  aside nav ul {
+    list-style-type: none;
+    padding: 0; }
+    aside nav ul li {
+      text-align: center; }
+      aside nav ul li a {
+        position: relative;
+        display: block;
+        color: #0060a6;
+        padding: 10px;
+        font-size: 22px;
+        font-weight: 900;
+        background-color: #ffec00;
+        text-transform: uppercase;
+        transition: all 0.6s; }
+        aside nav ul li a:hover {
+          text-decoration: none;
+          background-color: #b8aa00 !important; }
+        aside nav ul li a:focus {
+          text-decoration: none;
+          background-color: #b8aa00;
+          color: #0060a6 !important; }
+        aside nav ul li a:active {
+          text-decoration: none;
+          background-color: #b8aa00;
+          color: #0060a6; }
+      aside nav ul li.active a {
+        text-decoration: none;
+        background-color: #b8aa00; }
+
+article {
+  min-height: 400px;
+  background-color: #E7ECEF;
+  padding: 40px 40px 40px 60px; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0px;
+  position: relative; }
+
+section {
+  z-index: 1; }
+
+.nopadding {
+  padding-left: 0;
+  padding-right: 0; }
+
+.affix {
+  top: 0;
+  width: 390px;
+  z-index: 1000; }
+
+.affix-bottom {
+  position: relative; }
+
+/*# sourceMappingURL=style.css.map */
