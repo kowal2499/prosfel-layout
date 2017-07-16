@@ -36,8 +36,27 @@
 
       <div class="row">
         
+        <div class="mobile-nav">
+          <div class="nav-item">
+            <img src="images/logo.png" alt="PROSFEL logo" class="img-responsive">
+          </div>
+
+
+          <div class="nav-item">
+            ul. Leśna 25<br>
+            77-310 Debrzno
+          </div>
+
+          <div class="nav-item">
+            <img id="phone" src="images/phone.png" alt="">
+            725 161 949<br>502 627 579
+          </div>
+        
+        </div>
+
         <div class="col-md-4 nopadding">
-          <aside data-spy="affix">
+
+          <aside>
           
             <div class="logo">
               <img src="images/logo.png" alt="PROSFEL logo" class="img-responsive">
@@ -75,19 +94,19 @@
           <section>
           
             <article id="about"> 
-              O nas
+                <?php include("layout/layout-about.php"); ?>
             </article>
 
             <article id="mobile">
-                Mobilny serwis opon do 56 cali
+                <?php include("layout/layout-mobile.php"); ?>
             </article>
             
             <article id="sale">
-                Sprzedaż/montaż opon i dętek w atrakcyjnych cenach
+                <?php include("layout/layout-sale.php"); ?>
             </article>
             
             <article id="workshop">
-                Wulkanizacja i mechanika pojazdowa
+                <?php include("layout/layout-workshop.php"); ?>
             </article>
           
           </section>    
@@ -105,16 +124,17 @@
     <script src="dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <script>
       // $('aside').affix({
       //   offset: {
       //     top: "40",
-      //     bottom: "60"
+      //     bottom: "941"
       //   }
       // })
       // console.log($('footer').outerHeight(true));
-      $('body').scrollspy({ target: '#navbar-side' })
+      // $('body').scrollspy({ target: '#navbar-side' })
     </script>
   </body>
 </html>

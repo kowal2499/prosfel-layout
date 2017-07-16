@@ -4,17 +4,23 @@ $cBlue: #0060a6;
 $cWhite: #fff;
 $cBackground: #E7ECEF;
 
+@import "mobile-nav";
 @import "aside";
 @import "article";
+
 
 body {
 	font-family: 'Montserrat', sans-serif;
 	padding: 0px;
 	position: relative;
+	margin: 40px;
 }
 
 section {
 	z-index: 1;
+	padding-bottom: 30px;
+	background-color: $cBackground;
+	border-right: 5px solid $cYellowDark;
 }
 
 .nopadding {
@@ -29,6 +35,6 @@ section {
 }
 
 .affix-bottom {
-	position: relative;
+	position: fixed !important;
 	// bottom: 40px;
 }

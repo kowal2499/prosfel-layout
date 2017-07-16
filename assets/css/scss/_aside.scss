@@ -1,11 +1,18 @@
+.fixed-bottom {
+	position: fixed;
+	bottom: 0;
+	z-index: 1000;
+	width: 390px;
+}
+
 aside {
 	background-color: $cBlue;
 	background-image: url("../../images/sidebar-background.png");
 	background-repeat: no-repeat;
-	background-position: bottom;
-	height: 100vh;
+	background-position: top;
 	display: block;
 	padding-top: 60px;
+	padding-bottom: 150px;
 
 	.logo {
 		position: relative;
@@ -139,4 +146,27 @@ aside {
 		}
 	}
 
+}
+
+@media screen and (max-width: 991px) {
+	aside {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.mobile-nav {
+		display: none;
+	}
+}
+
+
+@media screen and (max-width: 1199px) {
+	.fixed-bottom {
+		width: 323px;
+	}
+
+	aside .logo {
+		width: 110%;
+	}
 }
