@@ -219,7 +219,6 @@ article {
 body {
   font-family: 'Montserrat', sans-serif;
   padding: 0px;
-  position: relative;
   margin: 40px; }
 
 section {
@@ -235,9 +234,17 @@ section {
 .affix {
   top: 0;
   width: 390px;
-  z-index: 1000; }
-
-.affix-bottom {
+  z-index: 1000;
   position: fixed !important; }
+
+header {
+  background-color: #E7ECEF; }
+
+footer {
+  background-color: #ffec00; }
+
+@media screen and (max-width: 1199px) {
+  .affix {
+    width: 323px !important; } }
 
 /*# sourceMappingURL=style.css.map */

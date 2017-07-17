@@ -12,7 +12,6 @@ $cBackground: #E7ECEF;
 body {
 	font-family: 'Montserrat', sans-serif;
 	padding: 0px;
-	position: relative;
 	margin: 40px;
 }
 
@@ -32,9 +31,29 @@ section {
 		top: 0;
 		width: 390px;
 		z-index: 1000;
+		position: fixed !important;
 }
 
-.affix-bottom {
-	position: fixed !important;
-	// bottom: 40px;
+
+
+// .affix-bottom {
+// 	position: fixed !important;
+// }
+
+header {
+	// height: 50px;
+	background-color: $cBackground;
+	// margin-bottom: 40px;
+}
+
+footer {
+	// height: 600px;
+	background-color: $cYellow;
+	// margin-top: 30px;
+}
+
+@media screen and (max-width: 1199px) {
+  .affix {
+    width: 323px !important;
+  }
 }
