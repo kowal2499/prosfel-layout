@@ -3,26 +3,30 @@
   position: fixed;
   top: 0;
   left: 0;
+  padding-bottom: 10px;
   z-index: 1001;
   width: 100%;
   text-align: center;
   color: #fff;
   font-size: 18px; }
-  .mobile-nav img {
-    box-sizing: border-box;
-    height: 80px;
-    padding: 5px; }
   .mobile-nav .nav-item {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 20px;
-    margin-right: 20px; }
-    .mobile-nav .nav-item img#phone {
+    word-break: break-all;
+    width: 30%; }
+    .mobile-nav .nav-item img {
       width: 30px;
-      height: 30px;
-      display: block;
-      margin: 0 auto; }
+      padding-bottom: 3px; }
+    .mobile-nav .nav-item a {
+      color: #fff; }
+  .mobile-nav img.logo {
+    padding: 5px;
+    margin-bottom: 10px;
+    height: 50px; }
 
+@media screen and (max-width: 991px) {
+  .mobile-nav {
+    font-size: 12px; } }
 .fixed-bottom {
   position: fixed;
   bottom: 0;
@@ -77,50 +81,72 @@ aside {
     text-align: center; }
     aside .address hr {
       background-color: #fff;
-      width: 30%; }
-    aside .address .line-phone {
+      width: 30%;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    aside .address img {
+      display: inline-block;
+      width: 50px;
       vertical-align: top;
-      margin-top: 10px; }
-      aside .address .line-phone img {
-        display: inline-block;
-        width: 50px;
-        vertical-align: top;
-        padding-top: 17px;
-        padding-right: 8px; }
-      aside .address .line-phone .phone {
-        display: inline-block;
-        font-weight: bold;
-        font-size: 25px;
-        letter-spacing: 2px; }
-  aside nav ul {
-    list-style-type: none;
-    padding: 0; }
-    aside nav ul li {
-      text-align: center; }
-      aside nav ul li a {
-        position: relative;
-        display: block;
-        color: #0060a6;
-        padding: 10px;
-        font-size: 22px;
-        font-weight: 900;
-        background-color: #ffec00;
-        text-transform: uppercase;
-        transition: all 0.6s; }
-        aside nav ul li a:hover {
+      padding-top: 17px;
+      padding-right: 8px; }
+    aside .address .line {
+      vertical-align: top;
+      margin-top: 10px;
+      display: inline-block;
+      font-size: 25px;
+      letter-spacing: 2px; }
+      aside .address .line .txt {
+        display: inline-block; }
+    aside .address .line-address {
+      font-weight: 400;
+      letter-spacing: 1px;
+      font-size: 21px; }
+      aside .address .line-address img {
+        padding-top: 10px; }
+    aside .address .line-phone {
+      font-weight: 700; }
+      aside .address .line-phone a {
+        color: #fff; }
+    aside .address .line-email {
+      font-size: 20px; }
+      aside .address .line-email .txt {
+        padding-top: 5px; }
+      aside .address .line-email a {
+        color: #fff; }
+      aside .address .line-email img {
+        padding-top: 0; }
+  aside nav {
+    margin-top: 60px; }
+    aside nav ul {
+      list-style-type: none;
+      padding: 0; }
+      aside nav ul li {
+        text-align: center; }
+        aside nav ul li a {
+          position: relative;
+          display: block;
+          color: #0060a6;
+          padding: 10px;
+          font-size: 22px;
+          font-weight: 900;
+          background-color: #ffec00;
+          text-transform: uppercase;
+          transition: all 0.6s; }
+          aside nav ul li a:hover {
+            text-decoration: none;
+            background-color: #b8aa00 !important; }
+          aside nav ul li a:focus {
+            text-decoration: none;
+            background-color: #b8aa00;
+            color: #0060a6 !important; }
+          aside nav ul li a:active {
+            text-decoration: none;
+            background-color: #b8aa00;
+            color: #0060a6; }
+        aside nav ul li.active a {
           text-decoration: none;
-          background-color: #b8aa00 !important; }
-        aside nav ul li a:focus {
-          text-decoration: none;
-          background-color: #b8aa00;
-          color: #0060a6 !important; }
-        aside nav ul li a:active {
-          text-decoration: none;
-          background-color: #b8aa00;
-          color: #0060a6; }
-      aside nav ul li.active a {
-        text-decoration: none;
-        background-color: #b8aa00; }
+          background-color: #b8aa00; }
 
 @media screen and (max-width: 991px) {
   aside {
@@ -165,7 +191,10 @@ article {
     color: #0060a6;
     font-weight: 700; }
   article .yellow {
-    color: #b8aa00;
+    position: relative;
+    background-color: #D8DAB0;
+    padding-left: 8px;
+    padding-right: 8px;
     font-weight: 700; }
   article .contact {
     display: inline-block;
@@ -173,7 +202,7 @@ article {
     margin: 20px auto;
     width: 100%;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.1); }
+    background-color: #737577; }
     article .contact img {
       padding: 10px; }
   article .white-detail, article .white-detail a {
@@ -198,7 +227,7 @@ article {
   article li {
     font-size: 18px;
     display: inline-block;
-    padding: 15px;
+    padding: 12px;
     margin: 5px;
     border: 3px solid #ffec00;
     background-color: #0060a6;
@@ -208,43 +237,112 @@ article {
     margin: 0 auto; }
 
 @media screen and (max-width: 991px) {
-  article {
-    word-break: break-all; }
+  article h3 {
+    font-size: 18px; }
     article h3:before {
       width: 50%; }
-    article .right, article .left {
-      padding-left: 0;
-      padding-right: 0;
-      font-size: 18px; } }
-.owl-item .item {
-  width: 100%;
-  height: 350px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center; }
+  article .right, article .left {
+    padding-left: 0;
+    padding-right: 0; }
+  article .lead {
+    font-size: 14px; }
+  article .white-detail {
+    font-size: 16px; }
+    article .white-detail a {
+      font-size: 16px; }
+  article .contact img {
+    width: 60px; }
+  article ul {
+    padding-left: 20px; }
+  article li {
+    font-size: 15px;
+    padding: 8px; } }
+@media screen and (max-width: 1024px) {
+  article h3:before {
+    height: 65px; } }
+@media screen and (max-width: 768px) {
+  article h3:before {
+    height: 120px; }
 
-.owl-wrapper {
-  position: relative; }
-  .owl-wrapper .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
+  article#about .right {
+    background-size: 35%;
+    background-position: 20% 0%; }
+
+  article#mobile .left {
+    background-position: 0% 10%;
+    background-size: 60%; } }
+@media screen and (max-width: 425px) {
+  article h3:before {
+    height: 80px; }
+
+  article#about .right {
+    background-size: 75%; }
+
+  article#mobile .left {
+    background-position: 0% 10%;
+    background-size: 90%; } }
+@media screen and (max-width: 375px) {
+  article h3:before {
+    height: 60px; }
+
+  article#about .right {
+    background-size: 80%; }
+
+  article#mobile .left {
+    background-position: 0% 10%;
+    background-size: 90%; } }
+#slider {
+  padding: 0;
+  min-height: auto; }
+  #slider .owl-item .item {
     width: 100%;
-    background: linear-gradient(transparent, #e7ecef);
-    z-index: 50; }
-    .owl-wrapper .overlay h1 {
-      border-bottom: 1px solid #0060a6;
-      color: #0060a6;
-      font-weight: 700;
-      text-align: right;
-      margin-bottom: 20px; }
-    .owl-wrapper .overlay p {
-      font-size: 19px; }
+    height: 380px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; }
+  #slider .owl-wrapper {
+    position: relative; }
+    #slider .owl-wrapper .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(transparent, #e7ecef);
+      z-index: 50; }
+      #slider .owl-wrapper .overlay h1 {
+        border-bottom: 1px solid #0060a6;
+        color: #0060a6;
+        font-weight: 700;
+        text-align: right;
+        margin-bottom: 20px; }
+      #slider .owl-wrapper .overlay p {
+        font-size: 19px; }
+      #slider .owl-wrapper .overlay .description {
+        padding: 40px 30px 0px 60px;
+        position: absolute;
+        bottom: 0;
+        width: 100%; }
+      #slider .owl-wrapper .overlay .social-icon {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        right: 0;
+        top: 60px;
+        display: block; }
 
+@media screen and (max-width: 991px) {
+  .social-icon {
+    top: auto;
+    bottom: 30px; } }
 body {
   font-family: 'Montserrat', sans-serif;
   padding: 0px;
-  margin: 40px; }
+  margin: 60px;
+  background-image: url("../../images/tires.jpg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 60%; }
 
 section {
   z-index: 1;
@@ -271,5 +369,19 @@ footer {
 @media screen and (max-width: 1199px) {
   .affix {
     width: 323px !important; } }
+@media screen and (max-width: 991px) {
+  body {
+    margin: auto; }
+
+  section {
+    margin-top: 130px; }
+
+  article {
+    padding: 25px; }
+    article h1 {
+      font-size: 22px;
+      text-align: center; }
+    article p {
+      font-size: 14px; } }
 
 /*# sourceMappingURL=style.css.map */

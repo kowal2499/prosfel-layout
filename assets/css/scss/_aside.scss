@@ -71,16 +71,12 @@ aside {
 		hr {
 			background-color: $cWhite;
 			width: 30%;
+
+			margin-top: 10px;
+			margin-bottom: 10px;
 		}
 		
-		.line {	
-		}
-
-		.line-phone {
-			vertical-align: top;
-			margin-top: 10px;
-
-			img {
+		img {
 				display: inline-block;
 				width: 50px;
 				vertical-align: top;
@@ -88,18 +84,59 @@ aside {
 				padding-right: 8px;
 			}
 
-			.phone {
+
+		.line {
+			vertical-align: top;
+			margin-top: 10px;
+			display: inline-block;
+			font-size: 25px;
+			letter-spacing: 2px;
+
+			.txt {
 				display: inline-block;
-				font-weight: bold;
-				font-size: 25px;
-				letter-spacing: 2px;
+			}
+		}
+
+		.line-address {
+			font-weight: 400;
+			letter-spacing: 1px;
+			font-size: 21px;
+
+			img {
+				padding-top: 10px;
+			}
+		}
+
+		.line-phone {
+			font-weight: 700;
+
+			a {
+				color: $cWhite;
+			}
+			
+		}
+
+		.line-email {
+			font-size: 20px;
+
+			.txt {
+					padding-top: 5px;
 			}
 
+			a {
+				color: $cWhite;
+			}
+
+			img {
+				padding-top: 0;
+			}
 		}
 
 	}
 
 	nav {
+
+		margin-top: 60px;
 
 		ul {
 			list-style-type: none;

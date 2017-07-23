@@ -29,7 +29,6 @@ article {
 		    	background-position:center bottom;
 		    	background-size: cover;
 		    } 
-
     }
 
     p {
@@ -43,7 +42,11 @@ article {
     }
 
     .yellow {
-        color: $cYellowDark;
+        position: relative;
+        background-color: #D8DAB0;
+
+        padding-left: 8px;
+        padding-right: 8px;
         font-weight: 700;
     }
 
@@ -53,7 +56,8 @@ article {
     	margin: 20px auto;
     	width: 100%;
     	text-align: center;
-    	background-color: rgba( 0, 0, 0, 0.1);
+    	// background-color: rgba( 0, 0, 0, 0.1);
+        background-color: #737577;
 
     	img {
     		padding: 10px;
@@ -91,7 +95,7 @@ article {
     li {
     	font-size: 18px;
     	display: inline-block;
-    	padding: 15px;
+    	padding: 12px;
     	margin: 5px;
     	border: 3px solid $cYellow;
     	background-color: $cBlue;
@@ -106,6 +110,9 @@ article {
 }
 
 
+
+
+
 @media screen and (max-width: 991px) {
 
 	article {
@@ -113,14 +120,123 @@ article {
 	        &:before{
 	        		width: 50%;
 			    }
+            font-size: 18px;
 		}
 
 		.right, .left {
 			padding-left: 0;
 			padding-right: 0;
-			font-size: 18px;
 		}
 
-		word-break: break-all;
-	}
+        .lead {
+            font-size: 14px;
+        }
+
+        .white-detail { 
+            font-size: 16px;
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .contact {
+            img {
+                width: 60px;
+            }
+        }
+	
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 15px;
+            padding: 8px;
+        }
+    }
+    
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    article {
+        h3 {
+            &:before{
+                height: 65px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    article {
+        h3 {
+            &:before{
+                height: 120px;
+            }
+        }
+    }
+    article#about {
+        .right {
+            background-size: 35%;
+            background-position: 20% 0%;
+        }
+    }
+    article#mobile {
+        .left {
+            background-position: 0% 10%;
+            background-size: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    article {
+        h3 {
+            &:before{
+                height: 80px;
+            }
+        }
+    }
+    article#about {
+        .right {
+            background-size: 75%;
+        }
+    }
+    article#mobile {
+        .left {
+            background-position: 0% 10%;
+            background-size: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    article {
+        h3 {
+            &:before{
+                height: 60px;
+            }
+        }
+    }
+
+    article#about {
+        .right {
+            background-size: 80%;
+        }
+    }
+
+    article#mobile {
+        .left {
+            background-position: 0% 10%;
+            background-size: 90%;
+        }
+    }
+
 }
