@@ -144,9 +144,9 @@ aside {
             text-decoration: none;
             background-color: #b8aa00;
             color: #0060a6; }
-        aside nav ul li.active a {
+        aside nav ul li.active a, aside nav ul li.focus a {
           text-decoration: none;
-          background-color: #b8aa00; }
+          background-color: #b8aa00 !important; }
 
 @media screen and (max-width: 991px) {
   aside {

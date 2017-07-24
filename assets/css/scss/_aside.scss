@@ -174,9 +174,9 @@ aside {
 
 				}
 
-				&.active {
+				&.active, &.focus {
 				a {	text-decoration: none;
-						background-color: $cYellowDark;
+						background-color: $cYellowDark !important;
 				}}
 			}
 
