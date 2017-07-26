@@ -51,14 +51,55 @@ section {
   left: 0;
   right: 0;
   background-color: $cBackground;
-  z-index: 1001; 
+  z-index: 5002; 
 	
 	img {
 		display: block;
 		margin: 0 auto;
 		margin-top: 80px;
 		width: 400px;
+		margin-bottom: 20px;
+		padding: 10px;
+		background-color: $cYellow;
 	}
+
+	img#spinner { 
+		width: 80px;
+		margin-top: 0;
+		padding: 0;
+		background-color: $cBackground;
+	}
+
+	.dospin {
+		-webkit-animation-name: spin;
+    -webkit-animation-duration: 2000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+    -moz-animation-name: spin;
+    -moz-animation-duration: 20000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+
+    -ms-animation-name: spin;
+    -ms-animation-duration: 20000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+	}
+
+	@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+	}
+	@-webkit-keyframes spin {
+	    from { -webkit-transform: rotate(0deg); }
+	    to { -webkit-transform: rotate(360deg); }
+	}
+	@keyframes spin {
+	    from {transform:rotate(0deg);}
+	    to {transform:rotate(360deg);}
+	}
+
 }
 
 
@@ -67,7 +108,7 @@ header {
 }
 
 footer {
-	background-color: $cYellow;
+	
 }
 
 @media screen and (max-width: 1199px) {

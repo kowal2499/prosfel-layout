@@ -15,7 +15,7 @@
         <li>Prostowanie felg</li>
         <li>Spawanie aluminium i stali</li>
         <li>Wymiana opon/kół</li>
-        <li>Wyważanie kół nieprzelotowych (citroen, peugeot)</li>
+        <li>Wyważanie kół nieprzelotowych (Citroen, Peugeot)</li>
         <li>Wyważanie kół motocyklowych</li>
         <li>Sprzedaż opon nowych i używanych</li>
         <li>Mechanika pojazdowa</li>

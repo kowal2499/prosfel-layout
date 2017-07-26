@@ -76,19 +76,23 @@
 		$('body').imagesLoaded(
 			{ background: true },
 			function() {
-				
-					// $('body').removeClass('preload-active');
-					$('#preloader').fadeOut(1000);
-					console.log("loaded");
+					$('body').removeClass('preload-active');
+					
+					setTimeout(
+						function() {
+							$('#spinner').removeClass('dospin');
+							$('#preloader').fadeOut(1000); 
+						}, 
+						800
+					)
 			}
 		);
-
 
 		onResize();
 		$(".owl-carousel").owlCarousel({
 			items: 1,
 			autoplay: true,
-			autoplayTimeout: 4000,
+			autoplayTimeout: 6000,
 			autoplayHoverPause: false,
 			loop: true,
 			animateOut: 'fadeOut'

@@ -9,6 +9,7 @@ article {
 	        font-weight: 700;
 	        text-align: right;
 	        margin-bottom: 20px;
+            font-size: 28px;
 	  }
 
     h3 {
@@ -32,7 +33,7 @@ article {
     }
 
     p {
-        font-size: 19px;
+        font-size: 16px;
     }
 
 
@@ -68,7 +69,7 @@ article {
     	color: $cWhite;
     	display: inline-block;
 			font-weight: bold;
-			font-size: 25px;
+			font-size: 22px;
 			letter-spacing: 2px;
 
     }
@@ -93,9 +94,9 @@ article {
     }
 
     li {
-    	font-size: 18px;
+    	font-size: 16px;
     	display: inline-block;
-    	padding: 12px;
+    	padding: 9px;
     	margin: 5px;
     	border: 3px solid $cYellow;
     	background-color: $cBlue;
@@ -107,6 +108,14 @@ article {
     	margin: 0 auto;
     }
 
+}
+
+footer {
+    min-height: 10px;
+    text-align: center;
+    background-color: $cBackground;
+    padding: 10px;
+    border-right: 5px solid $cYellowDark;
 }
 
 

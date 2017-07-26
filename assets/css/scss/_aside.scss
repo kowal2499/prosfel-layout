@@ -89,7 +89,7 @@ aside {
 			vertical-align: top;
 			margin-top: 10px;
 			display: inline-block;
-			font-size: 25px;
+			font-size: 18px;
 			letter-spacing: 2px;
 
 			.txt {
@@ -100,7 +100,6 @@ aside {
 		.line-address {
 			font-weight: 400;
 			letter-spacing: 1px;
-			font-size: 21px;
 
 			img {
 				padding-top: 10px;
@@ -113,14 +112,17 @@ aside {
 			a {
 				color: $cWhite;
 			}
+			img {
+				padding-top: 4px;
+			}
 			
 		}
 
 		.line-email {
-			font-size: 20px;
+			font-size: 14px;
 
 			.txt {
-					padding-top: 5px;
+					padding-top: 8px;
 			}
 
 			a {
@@ -150,7 +152,7 @@ aside {
 					display: block;
 					color: $cBlue;
 					padding: 10px;
-					font-size: 22px;
+					font-size: 19px;
 					font-weight: 900;
 					background-color: $cYellow;
 					text-transform: uppercase;

@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<meta name="description" content="PROSFEL - serwis opon, wulkanizacja">
+		<meta name="description" content="PROSFEL - serwis opon, wulkanizacja, Człuchów, Chojnice, Tuchola, Złotów, Sępólno Krajeńskie">
 		<meta name="author" content="Roman Kowalski">
 		<!-- <link rel="icon" href="../../favicon.ico"> -->
 
@@ -33,28 +33,26 @@
 	</head>
 
 	<body data-spy="scroll" data-target="#navbar-side">
-
+		<?php include_once("analyticstracking.php") ?>
 
 		<script>
 			var bodyTag = document.getElementsByTagName('body')[0];
-			// bodyTag.className += " preloader-active";
+			bodyTag.className += " preloader-active";
 
 			var preloader = document.createElement("div");
 			var image = document.createElement("img");
-			image.src = "images/logo.png";
+			var wheel = document.createElement("img");
+			wheel.src = "images/spinning-wheel2.png";
+			wheel.className = "dospin";
+			wheel.id = "spinner";
+			image.src = "images/logo-preload.jpg";
 			preloader.id = "preloader";
 			preloader.appendChild(image);
+			preloader.appendChild(wheel);
 			bodyTag.appendChild(preloader);
 
 		</script>
 
-		<!-- <div id="preloader"> -->
-      <!-- <div class="static-logo"> -->
-          <!-- <img src="img/logo_aqua.png" alt=""> -->
-     
-          <!-- <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i> -->
-      <!-- </div> -->
-    <!-- </div> -->
 
 		<div class="container">
 
@@ -184,18 +182,24 @@
 						<article id="workshop">
 								<?php include("layout/layout-workshop.php"); ?>
 						</article>
+
+						
 					
-					</section>    
+					</section> 
+
+					<footer>
+							&copy; <?php echo date('Y'); ?> PROSFEL | Wszelkie prawa zastrzeżone | realizacja: <strong><a href="http://erla.pl" target="_blank">www.erla.pl</a></strong>
+					</footer>
+
+
 				</div>
 
 			</div><!-- /.row -->
 
 
-			<div class="row" id="footer">
-				<footer>
-					
-				</footer>
-			</div>
+			<!-- <div class="row" id="footer"> -->
+						<!-- (c) 2017 PROSFEL -->
+			<!-- </div> -->
 
 
 		</div><!-- /.container -->
