@@ -154,6 +154,9 @@ aside {
     display: none; } }
 @media screen and (min-width: 992px) {
   .mobile-nav {
+    display: none; }
+
+  #mobileMap {
     display: none; } }
 @media screen and (max-width: 1199px) {
   .fixed-bottom {
@@ -187,6 +190,13 @@ article {
       background-repeat: no-repeat;
       background-position: center bottom;
       background-size: cover; }
+  article li h2 {
+    font-size: 19px;
+    font-weight: bold;
+    color: #ffec00; }
+  article li p {
+    font-size: 14px;
+    margin-left: 20px; }
   article p {
     font-size: 16px; }
   article .blue {
@@ -386,6 +396,16 @@ footer {
 
 .img-row:nth-child(3) {
   margin-top: -6px; }
+
+aside #map {
+  width: 90%;
+  height: 200px;
+  margin: 0 auto; }
+
+#mobileMap {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px; }
 
 body {
   font-family: 'Montserrat', sans-serif;

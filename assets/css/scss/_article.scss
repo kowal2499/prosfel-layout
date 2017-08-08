@@ -32,6 +32,19 @@ article {
 		    } 
     }
 
+    li {
+        h2 {
+            font-size: 19px;
+            font-weight: bold;
+            color: $cYellow;
+        }
+
+        p {
+            font-size: 14px;
+            margin-left: 20px;
+        }
+    }
+
     p {
         font-size: 16px;
     }

@@ -184,7 +184,6 @@ aside {
 
 		}
 	}
-
 }
 
 @media screen and (max-width: 991px) {
@@ -195,6 +194,10 @@ aside {
 
 @media screen and (min-width: 992px) {
 	.mobile-nav {
+		display: none;
+	}
+
+	#mobileMap {
 		display: none;
 	}
 }
