@@ -1,3 +1,5 @@
+
+
 (function() {
 
 	"use strict";
@@ -32,43 +34,89 @@
 					return 270
 				}            
 			}
-		});
-
-		
+		});		
 	}
 
-	
+	var createGallery = function() {
 
-	var onScroll = function() {
-		scrollPos = $(window).scrollTop();
+		var images = [
+			{ 
+				'image': 'images/galeria/img01.jpeg',
+				'thumb': 'images/galeria/img01-thumb.jpeg',
+				'alt': 'to jest alet'
+			},
+			{ 
+				'image': 'images/galeria/img02.jpeg',
+				'thumb': 'images/galeria/img02-thumb.jpeg',
+				'alt': 'to jest alet'
+			},
+			{ 
+				'image': 'images/galeria/img03.jpeg',
+				'thumb': 'images/galeria/img03-thumb.jpeg',
+				'alt': 'to jest alet'
+			},
+			{ 
+				'image': 'images/galeria/img04.jpeg',
+				'thumb': 'images/galeria/img04-thumb.jpeg',
+				'alt': 'to jest alet'
+			},
+			{ 
+				'image': 'images/galeria/img05.jpeg',
+				'thumb': 'images/galeria/img05-thumb.jpeg',
+				'alt': 'to jest alet'
+			},
+			{ 
+				'image': 'images/galeria/img06.jpeg',
+				'thumb': 'images/galeria/img06-thumb.jpeg',
+				'alt': 'to jest alet'
+			},
 
-		// relase fix at bottom
-		if (scrollPos+windowHeight > (documentHeight - bodyMargin)) {
-			var bottomDistance = bodyMargin - parseInt(documentHeight - scrollPos - windowHeight)
-			aside.css("bottom", bottomDistance)
-		} else {
-		// set fix at top
-			aside.css("bottom", 0)
+		];
 
-			if (asideHeight > windowHeight) {
-				if (scrollPos+windowHeight > (bodyMargin + asideHeight)) {
-					aside.addClass("fixed-bottom");
-				} else {
-					aside.removeClass("fixed-bottom");
-				}
-			}
+		var gallery = $(".gallery-wrapper");
+		var node = gallery;
 
-			if (asideHeight <= windowHeight) {
-
-				if (scrollPos > bodyMargin) {
-					aside.addClass("fixed-bottom");
-				} else {
-					aside.removeClass("fixed-bottom");
-				}
-
-			}
+		// remove images
+		while (node[0].firstChild) {
+			node[0].removeChild(node[0].firstChild);
 		}
-	
+
+		var width = Math.floor(gallery.width() / 3) - 2;
+
+		var row = document.createElement("div");
+		row.className = "img-row";
+
+		for (var j=0; j<images.length; j++) {
+
+
+				if ((j>0) && (j % 3 == 0)) {
+					gallery[0].appendChild(row);
+					row = document.createElement("div");
+					row.className = "img-row";
+				}
+
+				var nest = document.createElement("div");
+				nest.className = "nest";
+				nest.style.width = width + "px";
+				nest.style.height = width + "px";
+
+				var href = document.createElement("a");
+				href.href = images[j].image;
+				href.style.backgroundImage = "url(" + images[j].thumb + ")";
+
+				var overlay = document.createElement("div");
+				overlay.className = "overlay";
+				
+
+				href.appendChild(overlay);
+				nest.appendChild(href);
+				row.appendChild(nest);
+
+		}
+		gallery[0].appendChild(row);
+
+		// run lightbox
+		var plugin = $('.gallery-wrapper a').simpleLightbox();
 	}
 
 	var onReady = function() {
@@ -98,18 +146,47 @@
 			animateOut: 'fadeOut'
 		});
 
-
 		smoothScroll.init({
 			easing: 'easeInOutCubic',
 			speed: 600
 		});
-
 		
 	}
 
 	$(document).ready(onReady);
-	// $(window).resize(onResize);
+	$(window).resize(createGallery);
 	// $(window).scroll(onScroll);
+
+	createGallery();
 	
 	
 })();
+
+
+// google maps
+
+function myMap() {
+
+		var mapCanvas = document.getElementById("map");
+		var mapCanvasMobile = document.getElementById("mobileMap");
+		var mapOptions = {
+				center: new google.maps.LatLng(53.535458, 17.242933),
+				zoom: 15,
+				scrollwheel: false,
+		};
+
+		var map = new google.maps.Map(mapCanvas, mapOptions);
+		var mapMobile = new google.maps.Map(mapCanvasMobile, mapOptions);
+
+		var marker = new google.maps.Marker({
+			position: {lat: 53.535458 , lng: 17.242933 },
+			map: map
+		});
+
+		var markerMobile = new google.maps.Marker({
+			position: {lat: 53.535458 , lng: 17.242933 },
+			map: mapMobile
+		});
+
+
+}

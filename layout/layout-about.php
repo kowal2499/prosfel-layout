@@ -5,6 +5,9 @@
 
     <p class="lead text-and-image right">Naszą firmę cechują <span class="yellow">rzetelność,</span> <span class="yellow">profesjonalizm,</span> <span class="yellow">fachowe doradztwo,</span> <span class="yellow">miła obsługa,</span> <span class="yellow">terminowość.</span> Dla nas słowo jest ważniejsze od pieniędzy, a zadowolenie klienta to klucz do sukcesu.</p>
 
+    <div id="mobileMap"></div>
+
+
     <p>Nasza specjalizacja i kluczowe punkty oferty to:</p>
 
     <div class="row">
@@ -18,6 +21,8 @@
             <h3>WULKANIZACJA I MECHANIKA POJAZDOWA</h3>
         </div> 
     </div>
+
+    <?php include("layout/layout-gallery.php"); ?>
 
 
     <img src="images/divider.png" alt="" class="img-responsive">

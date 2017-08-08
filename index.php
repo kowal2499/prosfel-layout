@@ -6,11 +6,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<meta name="description" content="PROSFEL - serwis opon, wulkanizacja, Człuchów, Chojnice, Tuchola, Złotów, Sępólno Krajeńskie">
+		<meta name="description" content="Serwis opon, wulkanizacja, mobilny serwis opon, wynajem lawet i przyczep: Człuchów, Chojnice, Tuchola, Złotów, Sępólno Krajeńskie">
 		<meta name="author" content="Roman Kowalski">
-		<!-- <link rel="icon" href="../../favicon.ico"> -->
 
-		<title>PROSFEL - mobilny serwis opon</title>
+		<meta property="og:locale" content="pl_PL" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="PROSFEL Kamil Pokrzywka - Mobilny Serwis Opon" />
+		<meta property="og:description" content="Serwis opon, wulkanizacja, mobilny serwis opon, wynajem lawet i przyczep: Człuchów, Chojnice, Tuchola, Złotów, Sępólno Krajeńskie" />
+		<meta property="og:url" content="http://www.prosfel.pl" />
+
+		<link rel="icon" href="favicon.png">
+
+		<title>PROSFEL Kamil Pokrzywka - Mobilny Serwis Opon</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,6 +29,8 @@
 
 		<!-- Custom styles for this template -->
 		<link href="assets/css/style.css?v=3" rel="stylesheet">
+		<link href="assets/css/simplelightbox.min.css?v=3" rel="stylesheet">
+		
 
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&amp;subset=latin-ext" rel="stylesheet">
 
@@ -135,11 +144,14 @@
 
 						</div> <!-- /.address -->
 
+						<div id="map"></div>
+
 						
 					</aside>    
 				</div>
 
 				<div class="col-md-8 nopadding">
+
 					<section>
 
 						<article id="slider">
@@ -171,6 +183,7 @@
 								<?php include("layout/layout-about.php"); ?>
 						</article>
 
+
 						<article id="mobile">
 								<?php include("layout/layout-mobile.php"); ?>
 						</article>
@@ -182,6 +195,8 @@
 						<article id="workshop">
 								<?php include("layout/layout-workshop.php"); ?>
 						</article>
+
+						
 
 						
 					
@@ -197,11 +212,6 @@
 			</div><!-- /.row -->
 
 
-			<!-- <div class="row" id="footer"> -->
-						<!-- (c) 2017 PROSFEL -->
-			<!-- </div> -->
-
-
 		</div><!-- /.container -->
 
 		<!-- Bootstrap core JavaScript
@@ -215,7 +225,9 @@
 		<script src="assets/js/owl.carousel.min.js"></script>
 		<script src="assets/js/smooth-scroll.min.js"></script>
 		<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+		<script src="assets/js/simple-lightbox.min.js"></script>
 		<script src="assets/js/main.js?v=3"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyCtMbLROmsjdGA_6P9E9mgRxhH0uZ7onnY" type="text/javascript"></script>
 
 	</body>
 </html>
